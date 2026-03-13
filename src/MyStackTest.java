@@ -5,7 +5,7 @@ public class MyStackTest {
 
     @Test
     void testPushAndTop() {
-        MyStack stack = new MyStack(5);
+        MyStack<Integer> stack = new MyStack<>();
         stack.push(10);
         stack.push(20);
         assertEquals(20, stack.top());
@@ -13,7 +13,7 @@ public class MyStackTest {
 
     @Test
     void testPop() {
-        MyStack stack = new MyStack(5);
+        MyStack<Integer> stack = new MyStack<>();
         stack.push(10);
         stack.pop();
         assertTrue(stack.isEmpty());
@@ -21,7 +21,7 @@ public class MyStackTest {
 
     @Test
     void testSize() {
-        MyStack stack = new MyStack(5);
+        MyStack<Integer> stack = new MyStack<>();
         stack.push(1);
         stack.push(2);
         stack.push(3);

@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 
-public class MyStack {
+public class MyStack<T> {
 
-    private ArrayList<Integer> elements;
+    private ArrayList<T> elements;
 
     public MyStack() {
         elements = new ArrayList<>();
     }
 
-    public int top() {
+    public T top() {
         if (isEmpty()) {
             throw new RuntimeException("Stack is empty");
         }
         return elements.get(elements.size() - 1);
     }
 
-    public void push(int n) {
-        elements.add(n);
+    public void push(T value) {
+        elements.add(value);
     }
 
     public void pop() {
